@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiper</title>
+</head>
+<body>
+
+    <form id="form">
+        <label>Product Fee: <input type="text" id="product-fee" ></label>
+        <select id="package-size">
+            <option value="">--Your package size--</option>
+            <option value="extraSmall">Less than 5KG</option>
+            <option value="small">Less than 10KG</option>
+            <option value="medium">Less than 30KG</option>
+            <option value="large">Less than 50KG</option>
+            <option value="extraLarge">Less than 100KG</option>
+        </select>
+        <select id="package-location">
+            <option value="">--Please choose an option--</option>
+            <option value="UAE">United Arab Emirates</option>
+            <option value="small">China</option>
+            <option value="medium">India</option>
+            <option value="large">Turkey</option>
+            <option value="extraLarge">Saudi Arabia</option>
+        </select>
+        <br><br>
+        <button type="submit">Ship It</button>
+    </form>
+
+    <h1 id="print"></h1>
+    <script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>

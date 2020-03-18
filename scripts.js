@@ -6,12 +6,19 @@ var fulfilmentFee = [
     { packageType: 'Extra Large', weightKG: 100, pricePerKG: 1.5, fulfilledBy: '20 Days' }
 ];
 
-var fulfilmentOptions = document.getElementById('package-size');
+var packSize = document.getElementById('package-size');
 const packList = fulfilmentFee.map(fulfilmentFee => (fulfilmentFee.packageType));
+var fragmentOne = document.createDocumentFragment();
 
-for (fulFee in packList) {
-    fulfilmentOptions.options[fulfilmentOptions.options.length] = new Option(packList[fulFee], fulFee);
-}
+
+packList.forEach(function (packList, index) {
+    var opt = document.createElement('option');
+    opt.innerHTML = packList;
+    opt.value = packList;
+    fragmentOne.appendChild(opt);
+});
+
+packSize.appendChild(fragmentOne);
 
 var forwardingFee = [
     { country: 'United Arab Emirates', pricePerKG: 3 },
@@ -21,38 +28,36 @@ var forwardingFee = [
     { country: 'Saudi Arabia', pricePerKG: 3 }
 ];
 
-
-var forwardingOptions = document.getElementById('package-location');
+var packLocation = document.getElementById('package-location');
 const countryList = forwardingFee.map(forwardingFee => (forwardingFee.country));
+var fragmentTwo = document.createDocumentFragment();
 
-for (country in countryList) {
-    forwardingOptions.options[forwardingOptions.options.length] = new Option(countryList[country], country);
-}
 
+countryList.forEach(function (countryList, index) {
+    var opt = document.createElement('option')
+    opt.innerHTML = countryList;
+    opt.value = countryList;
+    fragmentTwo.appendChild(opt);
+});
+
+packLocation.appendChild(fragmentTwo)
 
 
 function getInput(e) {
     const productPrice = document.getElementById('product-fee').value;
-    const forwardingOpt = document.getElementById('package-location').value;
+    var packageSize = document.getElementById('package-size').value;
+    var packageLocation = document.getElementById('package-location').value;
 
 
-    // var forwarding;
-
-    // forwardingOpt.forEach(function(e){
-    //     forwarding = e.toString();
-    // });
-
-
-    const fulfilmentOpt = document.getElementById('package-size').value;
     const print = document.getElementById('print');
 
     if (!isNaN(productPrice)) {
-        print.innerHTML = `Your product cost £${productPrice} and size being ${fulfilmentOpt} from ${forwardingOpt}`
+        print.innerHTML = `Your ${packageSize} product cost £${productPrice} and  size being ${packageLocation}`;
     };
 
     e.preventDefault();
 }
 
 const form = document.getElementById('form');
-form.addEventListener('submit', getInput)
-console.log(fulfilmentOpt.toString());
+form.addEventListener('submit', getInput);
+

@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
     <title>Shiper</title>
 </head>
+
 <body>
 
-    <form id="form">
-        <label>Product Fee: <input type="text" id="product-fee" ></label>
-        <br><br>
-        <label for="">Your Packagae Size
+    <div id="form-box">
+        <form id="form">
+            <label class="label">PRODUCT FEE</label>
+            <input type="text" id="product-fee">
+            <br>
+            <label class="label">PACKAGE SIZE
+            </label>
             <select id="package-size">
             </select>
-        </label>
-        <br><br>
-        <label for="">Your Packagae Location
+            <br>
+            <label class="label">Your Packagae Location
+            </label>
             <select id="package-location">
             </select>
-        </label>
-        <br><br>
-        <button type="submit">Ship It</button>
-    </form>
+            <br><br>
+            <button type="submit">Ship It</button>
+        </form>
 
-    <h1 id="print"></h1>
+        <div id="printer">
+            <label class="label_2">SHIPPING PRICE</label>
+            <h2 id="print"></h2>
+        </div>
+
+    </div>
+
+
+
     <script type="text/javascript" src="scripts.js"></script>
 </body>
+
 </html>

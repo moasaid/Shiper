@@ -1,0 +1,79 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F5FDFB;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+h1, h2, h3, h4 {
+    color: white;
+}
+
+#form-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    width: 30%;
+    flex-direction: column;
+}
+
+#printer {
+    display: flex;
+   
+    margin-top: 20px;
+    background-color: #1f1e35;
+    border-radius: 4px;
+    padding: 20px 15px;
+  
+  flex-direction: column;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    border: #A5D4E4 0.5px solid;
+    justify-content: center;
+    background-color: #D9F5FF;
+    
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.label {
+    font-size: 12px;
+    padding-left: auto;
+    margin-bottom: 8px;
+    color: #628693;
+}
+
+.label_2 {
+    font-size: 12px;
+    padding-left: auto;
+    
+    color: #c8d3d6;
+}
+
+#product-fee {
+    border: #A5D4E4 1px solid;
+    padding: 8px 5px;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #1f1e35;
+}
+
+button {
+    padding: 12px 5px;
+    border-radius: 4px;
+    background-color: #1E89EC;
+    color: white;
+    border: none;
+    font-size: 16px;
+}
+
+#package-size #package-location {
+    border-radius: 1px;
+    border: #A5D4E4 1px solid;
+    font-size: 14px;
+}
